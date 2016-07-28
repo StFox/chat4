@@ -1,7 +1,9 @@
 module Rooms
   class MessagesController < ApplicationController
-    before_action :set_message, only: [:destroy]
     include RoomCommonMethods
+
+    before_action :set_message, only: [:destroy]
+    before_action :authenticate_user!
 
     def index
       @messages = @room.messages.order("created_at DESC").page params[:page]

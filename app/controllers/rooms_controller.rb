@@ -1,5 +1,6 @@
 class RoomsController < ApplicationController
   before_action :set_room, only: [:destroy]
+  before_action :authenticate_user!
 
   # GET /rooms
   # GET /rooms.json
