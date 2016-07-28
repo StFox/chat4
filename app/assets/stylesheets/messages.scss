@@ -1,0 +1,7 @@
+.messages {
+  overflow-y: scroll;
+  height: 400px;
+  a[rel=next] {
+    display: none;
+  }
+}

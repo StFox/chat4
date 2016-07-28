@@ -1,0 +1,7 @@
+<p>rooms/users_controller</p>
+<ul>
+  <% @users.each  do |user| %>
+    <li><%= user.email %></li>
+    <li><%= link_to "delete", room_user_path(@room, user), method: :delete  %></li>
+  <% end %>
+</ul>

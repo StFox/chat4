@@ -1,0 +1,9 @@
+<% if @messages.last_page? %>
+  <%= Gon::Base.render_data %>
+<% end %>
+<%= link_to_next_page @messages, 'Next Page', remote: true %>
+<% @messages.reverse.each  do |message| %>
+  <li><%= message.user.email %></li>
+  <li><%= message.text %></li>
+  <li><%= message.created_at %></li>
+<% end %>

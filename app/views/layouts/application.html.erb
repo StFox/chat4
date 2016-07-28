@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat3</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body id="<%= controller_name %>">
+<%= link_to 'logut', destroy_user_session_path, method: :delete %>
+<%= link_to 'sing_up', new_user_registration_path %>
+<%= link_to 'login', new_user_session_path %>
+
+<%= yield %>
+
+</body>
+</html>
